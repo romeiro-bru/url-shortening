@@ -12,9 +12,38 @@ body {
   margin: 0;
   background-image: url(assets/images/undraw_pc.svg);
   background-repeat: no-repeat;
-  background-size: 39%;
-  background-position: right;
+  background-size: 30%;
+  background-position-x: 45rem;
+  background-position-y: 6rem;
   font-family: 'Poppins', sans-serif;
+  color: var(--text);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header h2 {
+  color: var(--text-dark);
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+li {
+  margin: 0 0.7rem;
+}
+
+.login {
+  display: inline;
+  align-self: center;
+}
+
+.login span {
+  margin-right: 1rem;
 }
 
 .App {
@@ -51,13 +80,13 @@ main {
 
 .banner p {
   margin-top: 0rem;
-  color: var(--text);
   font-weight: 500;
   font-size: 1.125rem;
 }
 
 button {
   background-color: var(--primary-color);
+  padding: 0.6rem 1.2rem;
   color: white;
   border: none;
   font-weight: bold;
@@ -75,8 +104,7 @@ input::placeholder {
   font-weight: 700;
 }
 
-.banner button {
-  padding: 0.6rem 1.2rem;
+.banner button, header button {
   border-radius: 1rem;
 }
 
