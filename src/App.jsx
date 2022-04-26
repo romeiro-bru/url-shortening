@@ -2,23 +2,32 @@ import './App.css';
 import { Footer } from './Components/Footer/Footer';
 import { Header } from './Components/Header/Header';
 
+const Banner = () => {
+  return (
+    <div className="banner">
+      <h1>More than just shorter links</h1>
+      <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
+      <button className="get-started">Get Started</button>
+    </div>
+  )
+}
+
+const Input = () => {
+  return (
+    <section className="input-box">
+      <input type="text" placeholder="Shorten a link here..." />
+      <button>Shorten It!</button>
+    </section>
+  )
+}
+
 function App() {
   return (
     <div className="App">
       <main>
         <Header />
-
-        <div className="banner">
-          <h1>More than just shorter links</h1>
-          <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
-          <button className="get-started">Get Started</button>
-        </div>
-
-        <section className="input-box">
-          <input type="text" placeholder="Shorten a link here..." />
-          <button>Shorten It!</button>
-        </section>
-
+        <Banner />
+        <Input />
         <section className="background">
           <h1>Advanced Statistics</h1>
           <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
@@ -44,7 +53,6 @@ function App() {
             </div>
           </section>
         </section>
-
         <Footer />
       </main>
     </div>
