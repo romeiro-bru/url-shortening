@@ -1,27 +1,12 @@
 import './App.css';
-import facebook from "./assets/images/facebook.svg";
-import twitter from "./assets/images/twitter.png";
-import instagram from "./assets/images/instagram.png";
-import pinterest from "./assets/images/pinterest.png";
-
+import { Footer } from './Components/Footer/Footer';
+import { Header } from './Components/Header/Header';
 
 function App() {
   return (
     <div className="App">
       <main>
-        <header>
-          <ul>
-            <li><h2>Shortly</h2></li>
-            <li>Features</li>
-            <li>Pricing</li>
-            <li>Resources</li>
-          </ul>
-
-          <div className="login">
-            <span>Login</span>
-            <button>Sign Up</button>
-          </div>
-        </header>
+        <Header />
 
         <div className="banner">
           <h1>More than just shorter links</h1>
@@ -65,34 +50,7 @@ function App() {
           <button className="get-started">Get Started</button>
         </section>
 
-        <footer>
-          <h2 className="bold">Shortly</h2>
-          <ul>
-            <li className="bold">Features</li>
-            <li>Links Shortening</li>
-            <li>Branded Links</li>
-            <li>Analytics</li>
-          </ul>
-          <ul>
-            <li className="bold">Reseources</li>
-            <li>Blog</li>
-            <li>Developers</li>
-            <li>Support</li>
-          </ul>
-          <ul>
-            <li className="bold">Company</li>
-            <li>About</li>
-            <li>Our Team</li>
-            <li>Careers</li>
-            <li>Contact</li>
-          </ul>
-          <ul className="icons">
-            <li><img style={{ width: "1.5rem" }} src={facebook} alt="facebook" /></li>
-            <li><img style={{ width: "1.8rem" }} src={twitter} alt="twitter" /></li>
-            <li><img style={{ width: "1.8rem" }} src={pinterest} alt="pinterest" /></li>
-            <li><img style={{ width: "1.8rem" }} src={instagram} alt="instagram" /></li>
-          </ul>
-        </footer>
+        <Footer />
       </main>
     </div>
   );
