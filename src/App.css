@@ -5,24 +5,25 @@
   --secondary-color: #3b3054;
   --text: #bfbfbf;
   --text-dark: #35323e;
+  --gray: #f2f2f2;
   --gray-violet: hsl(257, 7%, 63%);
+  --cyan: hsl(180, 66%, 49%);
 }
 
 body {
   margin: 0;
-  background-image: url(assets/images/undraw_pc.svg);
-  background-repeat: no-repeat;
-  background-size: 30%;
-  background-position-x: 45rem;
-  background-position-y: 6rem;
   font-family: 'Poppins', sans-serif;
   color: var(--text);
+  z-index: 1;
 }
+
 header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 3rem;
 }
 header h2 {
+  padding-left: 3rem;
   color: var(--text-dark);
   margin: 0;
 }
@@ -38,6 +39,8 @@ li {
 }
 
 .login {
+  position: absolute;
+  right: 9.5rem;
   display: inline;
   align-self: center;
 }
@@ -60,17 +63,17 @@ li {
   color: white;
 }
 
-main {
-  width: 87%;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .banner {
+  height: 42vh;
+  background-image: url(assets/images/undraw_pc.svg);
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position-x: 50rem;
+  background-position-y: 0rem;
   text-align: left;
-  width: 43%;
 }
 .banner h1 {
+  width: 41%;
   margin-bottom: 0rem;
   font-weight: 700;
   color: var(--text-dark);
@@ -79,6 +82,7 @@ main {
 }
 
 .banner p {
+  width: 43%;
   margin-top: 0rem;
   font-weight: 500;
   font-size: 1.125rem;
@@ -104,21 +108,68 @@ input::placeholder {
   font-weight: 700;
 }
 
-.banner button, header button {
+.get-started, header button {
   border-radius: 1rem;
 }
 
 .input-box {
+  /* position: absolute; */
+  background-color: var(--secondary-color);
+  background-image: url(assets/images/bg-shorten-desktop.svg);
+  background-size: cover;
+  top: 67%;
   padding: 1.9rem 0rem;
   width: 75%;
   margin-right: auto;
   margin-left: auto;
-  background-image: url(assets/images/bg-boost-desktop.svg);
-  background-color: var(--secondary-color);
+  
   border-radius: 0.3rem;
 }
 .input-box button {
   padding: 0.7rem 1.3rem;
   border-radius: 0.3rem;
   margin: 0 0.9rem;
+}
+
+.background {
+  padding: 4rem;
+  background-color: var(--gray);
+}
+
+.description-box {
+  display: flex;
+  text-align: left;
+}
+
+.description-box h2, .background h1 {
+  color: var(--secondary-color)
+}
+
+.purple-bg {
+  background-color: var(--secondary-color);
+  background-image: url(assets/images/bg-boost-desktop.svg);
+  background-size: cover;
+
+  color: white;
+  padding: 2rem 0rem;
+}
+
+footer {
+  text-align: left;
+  display: flex;
+  padding: 3rem;
+  background-color: var(--text-dark);
+}
+
+footer ul {
+  display: block;
+}
+
+.icons {
+  display: flex;
+}
+
+.bold {
+  font-weight: 700;
+  color: white;
 }
