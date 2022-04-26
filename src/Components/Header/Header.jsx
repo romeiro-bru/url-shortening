@@ -1,13 +1,21 @@
 import './style.css';
 
+const items = [
+  { name: "Features" },
+  { name: "Pricing" },
+  { name: "Resources" }
+]
+
 export function Header() {
   return (
     <header>
       <ul>
-        <li><h2>Shortly</h2></li>
-        <li>Features</li>
-        <li>Pricing</li>
-        <li>Resources</li>
+        <li>Shortly</li>
+        {items.map((item, i) => (
+          <li key={i}>
+            {item.name}
+          </li>
+        ))}
       </ul>
 
       <div className="login">
