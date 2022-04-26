@@ -45,11 +45,6 @@ function App() {
           </section>
         </section>
 
-        <section className="purple-bg">
-          <h1>Boost your links today</h1>
-          <button className="get-started">Get Started</button>
-        </section>
-
         <Footer />
       </main>
     </div>

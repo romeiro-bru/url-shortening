@@ -1,6 +1,14 @@
+.purple-bg {
+  background-color: var(--secondary-color);
+  background-image: url(../../assets/images/bg-boost-desktop.svg);
+  background-size: cover;
+
+  color: white;
+  padding: 2rem 0rem;
+}
+
 footer {
   text-align: left;
-  /* display: flex; */
   padding: 3rem 0rem;
   background-color: var(--text-dark);
 }
