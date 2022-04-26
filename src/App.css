@@ -27,12 +27,12 @@ ul {
 }
 
 .banner {
-  height: 42vh;
+  padding: 1rem 5rem 10rem 5rem;
   background-image: url(assets/images/undraw_pc.svg);
   background-repeat: no-repeat;
-  background-size: 25%;
+  background-size: 23%;
   background-position-x: 50rem;
-  background-position-y: 0rem;
+  background-position-y: 2rem;
   text-align: left;
 }
 .banner h1 {
@@ -76,11 +76,14 @@ input::placeholder {
 }
 
 .input-box {
-  /* position: absolute; */
+  position: absolute;
+  bottom: 16%;
+  left: 10%;
+  vertical-align: middle;
+
   background-color: var(--secondary-color);
   background-image: url(assets/images/bg-shorten-desktop.svg);
   background-size: cover;
-  top: 67%;
   padding: 1.9rem 0rem;
   width: 75%;
   margin-right: auto;
@@ -94,16 +97,35 @@ input::placeholder {
   margin: 0 0.9rem;
 }
 
-.background {
-  padding: 4rem;
+.brand-description {
+  padding: 8rem 2rem;
   background-color: var(--gray);
 }
 
-.description-box {
+.description-title {
+  text-align: -webkit-center;
+}
+
+.description-title p{
+  width: 41%;
+}
+
+.description-section {
   display: flex;
   text-align: left;
 }
 
-.description-box h2, .background h1 {
+.description-section div {
+  padding: 1rem 2.2rem;
+  margin: 0 1rem;
+  background-color: white;
+  border-radius: 0.3rem;
+}
+
+.description-section h2, .brand-description h1 {
   color: var(--secondary-color)
+}
+
+.description-section h2 {
+  font-size: 1.2rem;
 }
