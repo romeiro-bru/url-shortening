@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+header h2 {
+  padding-left: 3rem;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+header ul {
+  display: inline-flex;
+}
+
+header li {
+  margin: 0 0.7rem;
+}
+
+.login {
+  position: absolute;
+  right: 9.5rem;
+  display: inline;
+  align-self: center;
+}
+
+.login span {
+  margin-right: 1rem;
+}

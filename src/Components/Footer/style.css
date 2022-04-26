@@ -1,0 +1,33 @@
+footer {
+  text-align: left;
+  /* display: flex; */
+  padding: 3rem 0rem;
+  background-color: var(--text-dark);
+}
+
+footer h2 {
+  position: absolute;
+  left: 6rem;
+}
+
+footer ul {
+  display: block;
+  line-height: 2rem;
+  margin-right: 1rem;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+}
+
+.icons {
+  display: flex;
+  position: absolute;
+  right: 8rem;
+}
+
+.bold {
+  font-weight: 700;
+  color: white;
+}
