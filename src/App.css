@@ -1,15 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&family=Roboto:wght@300;500&display=swap');
+
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #3b3054;
+  --text: #bfbfbf;
+  --text-dark: #35323e;
+  --gray: #f2f2f2;
+  --gray-violet: hsl(257, 7%, 63%);
+  --cyan: hsl(180, 66%, 49%);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  z-index: 1;
+}
+
+ul {
+  list-style: none;
+  align-items: center;
+}
+
 .App {
   text-align: center;
 }
 
+.banner {
+  height: 42vh;
+  background-image: url(assets/images/undraw_pc.svg);
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position-x: 50rem;
+  background-position-y: 0rem;
+  text-align: left;
+}
+.banner h1 {
+  width: 41%;
+  margin-bottom: 0rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-size: 3rem;
+  line-height: 4rem;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.banner p {
+  width: 43%;
+  margin-top: 0rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+button {
+  background-color: var(--primary-color);
+  padding: 0.6rem 1.2rem;
   color: white;
+  border: none;
+  font-weight: bold;
+}
+
+input {
+  padding: 0.2rem 0.8rem;
+  border: none;
+  border-radius: 0.3rem;
+  height: 2rem;
+  width: 60%;
+}
+input::placeholder {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.get-started, header button {
+  border-radius: 1rem;
+}
+
+.input-box {
+  /* position: absolute; */
+  background-color: var(--secondary-color);
+  background-image: url(assets/images/bg-shorten-desktop.svg);
+  background-size: cover;
+  top: 67%;
+  padding: 1.9rem 0rem;
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  
+  border-radius: 0.3rem;
+}
+.input-box button {
+  padding: 0.7rem 1.3rem;
+  border-radius: 0.3rem;
+  margin: 0 0.9rem;
+}
+
+.background {
+  padding: 4rem;
+  background-color: var(--gray);
+}
+
+.description-box {
+  display: flex;
+  text-align: left;
+}
+
+.description-box h2, .background h1 {
+  color: var(--secondary-color)
 }
