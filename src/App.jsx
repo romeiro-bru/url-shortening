@@ -14,7 +14,9 @@ const Banner = () => {
     <div className="banner">
       <h1>More than just shorter links</h1>
       <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
-      <button className="get-started">Get Started</button>
+      <button className="get-started">
+        <a href="#shorten-it">Get Started</a>
+      </button>
     </div>
   )
 }
@@ -27,7 +29,7 @@ function Form({ setInput }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="input-box">
+    <form onSubmit={handleSubmit} className="input-box" id="shorten-it">
       <input onChange={(e) => setInput(e.target.value)} type="text" placeholder="Shorten a link here..." />
       <button>Shorten It!</button>
     </form>
