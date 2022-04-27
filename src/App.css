@@ -6,8 +6,10 @@
   --text: #bfbfbf;
   --text-dark: #35323e;
   --gray: #f2f2f2;
-  --gray-violet: hsl(257, 7%, 63%);
+  --gray-violet: hsl(260, 10%, 70%);
   --cyan: hsl(180, 66%, 49%);
+  --hover-btn: #ada9ec;
+  --transition: 0.7s;
 }
 
 body {
@@ -15,6 +17,11 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--text);
   z-index: 1;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 ul {
@@ -27,21 +34,21 @@ ul {
 }
 
 .banner {
-  padding: 1rem 5rem 10rem 5rem;
+  padding: 4rem 5rem 17rem 5rem;
   background-image: url(assets/images/undraw_pc.svg);
   background-repeat: no-repeat;
-  background-size: 23%;
-  background-position-x: 50rem;
-  background-position-y: 2rem;
+  background-size: 29%;
+  background-position-x: 48rem;
+  background-position-y: 6rem;
   text-align: left;
 }
 .banner h1 {
-  width: 41%;
+  width: 55%;
   margin-bottom: 0rem;
   font-weight: 700;
   color: var(--text-dark);
-  font-size: 3rem;
-  line-height: 4rem;
+  font-size: 4rem;
+  line-height: 5rem;
 }
 
 .banner p {
@@ -51,28 +58,43 @@ ul {
   font-size: 1.125rem;
 }
 
+/*/// BUTTONS ///*/
 button {
   background-color: var(--primary-color);
-  padding: 0.6rem 1.2rem;
+  padding: 0.8rem 1.7rem;
   color: white;
   border: none;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
-input {
-  padding: 0.2rem 0.8rem;
-  border: none;
+.get-started, header button {
+  border-radius: 3rem;
+}
+
+.get-started:hover, header button:hover,
+.input-box button:hover {
+  background-color: var(--hover-btn);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.input-box button {
+  padding: 0.7rem 1rem;
   border-radius: 0.3rem;
+  margin: 0 0.9rem;
+}
+/* ////////////// */
+input {
+  padding: 0.37rem 0.8rem;
+  border: none;
+  border-radius: 0.4rem;
   height: 2rem;
-  width: 60%;
+  width: 68%;
 }
 input::placeholder {
   color: var(--text);
   font-weight: 700;
-}
-
-.get-started, header button {
-  border-radius: 1rem;
 }
 
 .input-box {
@@ -84,17 +106,12 @@ input::placeholder {
   background-color: var(--secondary-color);
   background-image: url(assets/images/bg-shorten-desktop.svg);
   background-size: cover;
-  padding: 1.9rem 0rem;
-  width: 75%;
+  padding: 2rem 0rem;
+  width: 79%;
   margin-right: auto;
   margin-left: auto;
   
-  border-radius: 0.3rem;
-}
-.input-box button {
-  padding: 0.7rem 1.3rem;
-  border-radius: 0.3rem;
-  margin: 0 0.9rem;
+  border-radius: 0.4rem;
 }
 
 .container {
