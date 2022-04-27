@@ -1,7 +1,7 @@
 # Frontend Mentor - Shortly URL shortening API Challenge
 
 ## The challenge 🕵️
-Your challenge is to build out this landing page, integrate with the [shrtcode API](https://shrtco.de/docs/) and get it looking as close to the design as possible.
+Your [challenge](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) is to build out this landing page, integrate with the [shrtcode API](https://shrtco.de/docs/) and get it looking as close to the design as possible.
 
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
