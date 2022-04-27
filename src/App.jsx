@@ -19,11 +19,10 @@ const Banner = () => {
   )
 }
 
-function Form({ input, setInput }) {
+function Form({ setInput }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(input)
     e.target.reset()
   }
 
@@ -45,8 +44,8 @@ function App() {
         <Banner />
 
 
-        <section className="container-description position-relative ">
-          <Form input={input} setInput={setInput} />
+        <section className="container position-relative ">
+          <Form setInput={setInput} />
 
           <section className="result">{input}</section>
 
@@ -55,10 +54,10 @@ function App() {
             <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
           </div>
 
-          <section className="description-section">
+          <section className="cards-section">
             <div className="position-relative">
               <img src={chart} alt="icon" />
-              <div className="description-box">
+              <div className="card">
                 <h2>Brand Recognition</h2>
                 <p>Boost your brand recognition with each link.
                 Generic links don't mean a thing. Branded links help instil
@@ -69,7 +68,7 @@ function App() {
 
             <div className="position-relative">
               <img src={paper} alt="icon" />
-              <div className="description-box">
+              <div className="card">
                 <h2>Detailed Records</h2>
                 <p>Gain insights into who is clicking your links.
                 Knowing when and where people engage with your content helps inform better decisions.
@@ -79,7 +78,7 @@ function App() {
 
             <div className="position-relative">
               <img src={sparkles} alt="icon" />
-              <div className="description-box">
+              <div className="card">
                 <h2>Fully Customizable</h2>
                 <p>Improve brand awareness and content discoverabilitu through customizable links,
                 supercharging audience engagement.
