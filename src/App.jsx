@@ -19,17 +19,24 @@ const Banner = () => {
   )
 }
 
-const Input = () => {
+function Form({ input, setInput }) {
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(input)
+    e.target.reset()
+  }
+
   return (
-    <section className="input-box">
-      <input type="text" placeholder="Shorten a link here..." />
+    <form onSubmit={handleSubmit} className="input-box">
+      <input onChange={(e) => setInput(e.target.value)} type="text" placeholder="Shorten a link here..." />
       <button>Shorten It!</button>
-    </section>
+    </form>
   )
 }
 
 function App() {
-  const [link, setLink] = useState("")
+  const [input, setInput] = useState("")
 
   return (
     <div className="App">
@@ -39,9 +46,9 @@ function App() {
 
 
         <section className="container-description position-relative ">
-          <Input />
+          <Form input={input} setInput={setInput} />
 
-          <section className="result"></section>
+          <section className="result">{input}</section>
 
           <div className="description-title">
             <h1>Advanced Statistics</h1>
