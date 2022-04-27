@@ -29,6 +29,8 @@ const Input = () => {
 }
 
 function App() {
+  const [link, setLink] = useState("")
+
   return (
     <div className="App">
       <main>
@@ -38,6 +40,9 @@ function App() {
 
         <section className="container-description position-relative ">
           <Input />
+
+          <section className="result"></section>
+
           <div className="description-title">
             <h1>Advanced Statistics</h1>
             <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
