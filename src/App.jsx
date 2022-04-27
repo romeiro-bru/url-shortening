@@ -6,6 +6,7 @@ import chart from './assets/images/chart.png';
 import sparkles from './assets/images/sparkles.png';
 import paper from './assets/images/paper.png';
 
+const endpoint = "https://api.shrtco.de/v2/"
 
 const Banner = () => {
   return (
