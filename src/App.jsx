@@ -1,4 +1,5 @@
 import './App.css';
+import axios from 'axios';
 import { Footer } from './Components/Footer/Footer';
 import { Header } from './Components/Header/Header';
 import chart from './assets/images/chart.png';
