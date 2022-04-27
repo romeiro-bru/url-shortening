@@ -43,7 +43,7 @@ export function Footer() {
           <ul className="icons">
             {icons.map((icon, i) => (
               <li key={i}>
-                <img style={{ width: "1.4rem", marginRight: "1.2rem" }} src={icon.img} alt={icon.name} />
+                <img src={icon.img} alt={icon.name} />
               </li>
             ))}
           </ul>
