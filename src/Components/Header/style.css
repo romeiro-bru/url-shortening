@@ -1,13 +1,14 @@
 header {
   display: flex;
   justify-content: space-between;
+  font-size: 0.9rem;
 }
 
 header li:first-of-type {
   margin: 0 2rem 0 3rem;
   color: var(--text-dark);
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 header ul {
@@ -16,15 +17,28 @@ header ul {
 
 header li {
   margin: 0 0.7rem;
+  font-weight: 700;
+}
+
+header li:hover, .login span:hover {
+  color: var(--text-dark);
+  transition: var(--transition);
 }
 
 .login {
-  position: absolute;
-  right: 7.5rem;
   display: inline;
+  position: absolute;
+
+  right: 7.5rem;
   align-self: center;
+  font-weight: 700;
 }
 
 .login span {
   margin-right: 1rem;
+}
+
+.login button {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.87rem;
 }

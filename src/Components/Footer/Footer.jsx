@@ -22,7 +22,9 @@ export function Footer() {
     <>
       <section className="purple-bg">
         <h1>Boost your links today</h1>
-        <button className="get-started">Get Started</button>
+        <button className="get-started">
+          <a href="#shorten-it">Get Started</a>
+        </button>
       </section>
       <footer>
         <h2 className="bold">Shortly</h2>
