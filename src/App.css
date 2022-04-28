@@ -9,7 +9,7 @@
   --gray-violet: hsl(260, 10%, 70%);
   --cyan: hsl(180, 66%, 49%);
   --hover-btn: #ada9ec;
-  --transition: 0.7s;
+  --transition: 0.4s;
 }
 
 body {
@@ -98,10 +98,9 @@ input::placeholder {
 }
 
 .input-box {
-  position: absolute;
-  bottom: 39.3rem;
-  left: 9rem;
-  vertical-align: middle;
+  position: relative;
+  bottom: 11.5rem;
+  /* vertical-align: middle; */
 
   background-color: var(--secondary-color);
   background-image: url(assets/images/bg-shorten-desktop.svg);

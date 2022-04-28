@@ -54,9 +54,7 @@ function App() {
           <section className="result">
             <ul>
               {list.map((item, i) => (
-                <li key={i}>
-                  {item}
-                </li>
+                <li key={i}>{item}</li>
               ))}
             </ul>
           </section>
