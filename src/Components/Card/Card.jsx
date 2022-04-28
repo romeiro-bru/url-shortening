@@ -1,12 +1,12 @@
 import './style.css';
 
-export function Card({ title, content, img }) {
+export function Card({ title, text, img }) {
   return (
     <div className="position-relative">
       <img src={img} alt="icon" />
       <div className="card">
         <h2>{title}</h2>
-        <p>{content}</p>
+        <p>{text}</p>
       </div>
     </div>
   )
