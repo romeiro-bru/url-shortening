@@ -1,0 +1,41 @@
+.cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 6rem;
+  text-align: left;
+}
+
+.cards-section h2, .container h1 {
+  color: var(--secondary-color)
+}
+
+.cards-section h2 {
+  font-size: 1.2rem;
+}
+
+.cards-section img {
+  position: absolute;
+  left: 3rem;
+  bottom: 11rem;
+  width: 4rem;
+}
+
+.cards-section p {
+  font-size: 0.9rem;
+}
+
+.card {
+  width: 17rem;
+  padding: 2rem 1.8rem 1rem 1.8rem;
+  margin: 1rem 1rem;
+  background-color: white;
+  border-radius: 0.3rem;
+}
+
+
+@media (max-width: 1058px) {
+  .cards-section {
+    justify-content: center;
+  }
+}

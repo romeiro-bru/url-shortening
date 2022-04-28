@@ -31,11 +31,13 @@ footer li:hover:not(:first-of-type) {
 
 .about {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .icons {
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
   right: 8rem;
 }
