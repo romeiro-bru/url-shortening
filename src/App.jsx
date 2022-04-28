@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { Footer } from './Components/Footer/Footer';
 import { Header } from './Components/Header/Header';
+import { Card } from './Components/Card/Card';
 import chart from './assets/images/chart.png';
 import sparkles from './assets/images/sparkles.png';
 import paper from './assets/images/paper.png';
@@ -55,6 +56,10 @@ function App() {
   const [list, setList] = useState([])
   const [shortened, setShortened] = useState("")
 
+  const handleClickCopy = (e) => {
+
+  }
+
   return (
     <div className="App">
       <main>
@@ -69,7 +74,7 @@ function App() {
               {list.map((item, i) => (
                 <li key={i}>
                   {item}
-                  <button>Copy</button>
+                  <button onClick={handleClickCopy}>Copy</button>
                 </li>
               ))}
             </ul>
@@ -81,36 +86,15 @@ function App() {
           </div>
 
           <section className="cards-section">
-            <div className="position-relative">
-              <img src={chart} alt="icon" />
-              <div className="card">
-                <h2>Brand Recognition</h2>
-                <p>Boost your brand recognition with each link.
+            <Card img={chart} title="Brand Recognition" content="Boost your brand recognition with each link.
                 Generic links don't mean a thing. Branded links help instil
-                confidence in your content.
-              </p>
-              </div>
-            </div>
+                confidence in your content." />
 
-            <div className="position-relative">
-              <img src={paper} alt="icon" />
-              <div className="card">
-                <h2>Detailed Records</h2>
-                <p>Gain insights into who is clicking your links.
-                Knowing when and where people engage with your content helps inform better decisions.
-            </p>
-              </div>
-            </div>
+            <Card img={paper} title="Detailed Records" content="Gain insights into who is clicking your links.
+                Knowing when and where people engage with your content helps inform better decisions." />
 
-            <div className="position-relative">
-              <img src={sparkles} alt="icon" />
-              <div className="card">
-                <h2>Fully Customizable</h2>
-                <p>Improve brand awareness and content discoverabilitu through customizable links,
-                supercharging audience engagement.
-            </p>
-              </div>
-            </div>
+            <Card img={sparkles} title="Fully Customizable" content="Improve brand awareness and content discoverabilitu through customizable links,
+                supercharging audience engagement." />
           </section>
         </section>
         <Footer />
