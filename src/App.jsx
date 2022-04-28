@@ -1,13 +1,13 @@
 import './App.css';
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Footer } from './Components/Footer/Footer';
 import { Header } from './Components/Header/Header';
 import chart from './assets/images/chart.png';
 import sparkles from './assets/images/sparkles.png';
 import paper from './assets/images/paper.png';
 
-const endpoint = "https://api.shrtco.de/v2/"
+const endpoint = 'https://api.shrtco.de/v2'
 
 const Banner = () => {
   return (
@@ -21,13 +21,26 @@ const Banner = () => {
   )
 }
 
-function Form({ list, setList, input, setInput }) {
+function Form({ shortened, setShortened, list, setList, input, setInput }) {
 
   const handleSubmit = (e) => {
+    const shortenLink = async () => {
+      try {
+        const response = await axios.get(`${endpoint}/shorten?url=${input}`)
+        setShortened(response.data.result.short_link)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    shortenLink()
     e.preventDefault()
-    input && setList([...list, input].reverse());
+    list && setList([...list, shortened].reverse());
     e.target.reset()
+    console.log(1, list)
+    console.log(2, shortened)
+    console.log(3, list)
   }
+
 
   return (
     <form onSubmit={handleSubmit} className="input-box" id="shorten-it">
@@ -40,6 +53,7 @@ function Form({ list, setList, input, setInput }) {
 function App() {
   const [input, setInput] = useState("")
   const [list, setList] = useState([])
+  const [shortened, setShortened] = useState("")
 
   return (
     <div className="App">
@@ -47,14 +61,16 @@ function App() {
         <Header />
         <Banner />
 
-
         <section className="container position-relative ">
-          <Form list={list} setList={setList} input={input} setInput={setInput} />
+          <Form shortened={shortened} setShortened={setShortened} list={list} setList={setList} input={input} setInput={setInput} />
 
-          <section className="result">
+          <section className="links-list">
             <ul>
               {list.map((item, i) => (
-                <li key={i}>{item}</li>
+                <li key={i}>
+                  {item}
+                  <button>Copy</button>
+                </li>
               ))}
             </ul>
           </section>
