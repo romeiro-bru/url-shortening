@@ -21,23 +21,25 @@ const Banner = () => {
   )
 }
 
-function Form({ setInput }) {
+function Form({ list, setList, input, setInput }) {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    input && setList([...list, input].reverse());
     e.target.reset()
   }
 
   return (
     <form onSubmit={handleSubmit} className="input-box" id="shorten-it">
       <input onChange={(e) => setInput(e.target.value)} type="text" placeholder="Shorten a link here..." />
-      <button>Shorten It!</button>
+      <button type="submit">Shorten It!</button>
     </form>
   )
 }
 
 function App() {
   const [input, setInput] = useState("")
+  const [list, setList] = useState([])
 
   return (
     <div className="App">
@@ -47,9 +49,17 @@ function App() {
 
 
         <section className="container position-relative ">
-          <Form setInput={setInput} />
+          <Form list={list} setList={setList} input={input} setInput={setInput} />
 
-          <section className="result">{input}</section>
+          <section className="result">
+            <ul>
+              {list.map((item, i) => (
+                <li key={i}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </section>
 
           <div className="description-title">
             <h1>Advanced Statistics</h1>
