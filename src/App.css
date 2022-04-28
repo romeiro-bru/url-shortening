@@ -8,6 +8,8 @@
   --gray: #f2f2f2;
   --gray-violet: hsl(260, 10%, 70%);
   --cyan: hsl(180, 66%, 49%);
+
+  --warning: #f46262;
   --hover-btn: #ada9ec;
   --transition: 0.4s;
 }
@@ -84,6 +86,12 @@ button {
   border-radius: 0.3rem;
   margin: 0 0.9rem;
 }
+
+.links-list button {
+  padding: 0.55rem 1.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.7rem;
+}
 /* ////////////// */
 input {
   padding: 0.37rem 0.8rem;
@@ -99,24 +107,41 @@ input::placeholder {
 
 .input-box {
   position: relative;
-  bottom: 11.5rem;
-  /* vertical-align: middle; */
-
+  bottom: 5.5rem;
   background-color: var(--secondary-color);
   background-image: url(assets/images/bg-shorten-desktop.svg);
   background-size: cover;
   padding: 2rem 0rem;
   width: 79%;
   margin-right: auto;
-  margin-left: auto;
-  
+  margin-left: auto;  
+  margin-bottom: 0;
   border-radius: 0.4rem;
 }
 
 .container {
-  padding: 8rem 2rem;
+  padding: 2rem 5rem 8rem 5rem;
   background-color: var(--gray);
 }
+
+/* /// Results //// */
+.links-list {
+  position: relative;
+  bottom: 4rem;
+}
+
+.links-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1.5rem;
+  background: white;
+  border-radius: 0.3rem;
+  color: var(--text-dark);
+  margin: 0.7rem 0;
+  overflow: auto;
+  font-size: 0.9rem;
+}
+/* //////////////// */
 
 .description-title {
   text-align: -webkit-center;
