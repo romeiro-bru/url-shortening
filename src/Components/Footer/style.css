@@ -24,15 +24,31 @@ footer ul {
   margin-right: 1rem;
 }
 
+/* apply hover effect to li except for first li */
+footer li:hover:not(:first-of-type) {
+  color: var(--primary-color);
+}
+
 .about {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .icons {
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
   right: 8rem;
+}
+
+.icons img {
+  width: 1.4rem;
+  margin-right: 1.2rem;
+}
+/* adds a filter to change png color */
+.icons img:hover {
+  filter: grayscale(100%) brightness(30%) sepia(70%) hue-rotate(-150deg) saturate(900%) contrast(1);
 }
 
 .bold {

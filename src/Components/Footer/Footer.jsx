@@ -22,7 +22,9 @@ export function Footer() {
     <>
       <section className="purple-bg">
         <h1>Boost your links today</h1>
-        <button className="get-started">Get Started</button>
+        <button className="get-started">
+          <a href="#shorten-it">Get Started</a>
+        </button>
       </section>
       <footer>
         <h2 className="bold">Shortly</h2>
@@ -41,7 +43,7 @@ export function Footer() {
           <ul className="icons">
             {icons.map((icon, i) => (
               <li key={i}>
-                <img style={{ width: "1.4rem", marginRight: "1.2rem" }} src={icon.img} alt={icon.name} />
+                <img src={icon.img} alt={icon.name} />
               </li>
             ))}
           </ul>
