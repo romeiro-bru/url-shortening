@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Footer } from './Components/Footer/Footer';
@@ -83,7 +83,7 @@ function App() {
                   <div className="short-link">
                     {item.short_link}
                     <button onClick={handleClickCopy}
-                      style={{ backgroundColor: isCopied ? "var(--secondary-color)" : "" }}
+                      style={{ backgroundColor: isCopied ? "$secondary-color" : "" }}
                     >
                       <span>{isCopied ? 'Copied!' : 'Copy'}</span>
                     </button>

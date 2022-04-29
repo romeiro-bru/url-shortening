@@ -1,0 +1,46 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+
+  ul {
+    display: inline-flex;
+  }
+
+  li {
+    margin: 0 0.7rem;
+    font-weight: 700;
+    &:hover {
+      color: var(--text-dark);
+      transition: var(--transition);
+    }
+  }
+
+  li:first-of-type {
+    margin: 0 2rem 0 3rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+}
+
+.login {
+  display: inline;
+  position: absolute;
+  right: 7.5rem;
+  align-self: center;
+  font-weight: 700;
+
+  span {
+    margin-right: 1rem;
+    &:hover {
+      color: var(--text-dark);
+      transition: var(--transition);
+    }
+  }
+
+  button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.87rem;
+  }  
+}

@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 
 export function Card({ title, text, img }) {
   return (
