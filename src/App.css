@@ -89,6 +89,7 @@ button {
 
 .shortened-links-list button {
   padding: 0.55rem 1.5rem;
+  margin: 0 0.1rem 0 1rem;
   border-radius: 0.3rem;
   font-size: 0.7rem;
 }
@@ -132,14 +133,19 @@ input::placeholder {
 
 .shortened-links-list li {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0.8rem 1.5rem;
   background: white;
   border-radius: 0.3rem;
-  color: var(--primary-color);
+  color: var(--text-dark);
   margin: 0.7rem 0;
   overflow: auto;
   font-size: 0.9rem;
+}
+
+.short-link {
+  color: var(--primary-color);
 }
 /* //////////////// */
 
