@@ -35,16 +35,16 @@ function Form({ shortened, setShortened, list, setList, input, setInput }) {
   }, [shortened])
 
   const handleSubmit = (e) => {
+    e.preventDefault()
     const shortenLink = async () => {
       try {
         const response = await axios.get(`${endpoint}/shorten?url=${input}`)
-        setShortened(response.data.result.short_link)
+        setShortened(response.data.result)
       } catch (error) {
         console.log(error)
       }
     }
     shortenLink()
-    e.preventDefault()
   }
 
 
@@ -79,13 +79,15 @@ function App() {
             <ul>
               {list !== undefined && list.map((item, i) => (
                 <li key={i}>
-                  {item}
-                  <button
-                    onClick={handleClickCopy}
-                    style={{ backgroundColor: isCopied ? "var(--secondary-color)" : "" }}
-                  >
-                    <span>{isCopied ? 'Copied!' : 'Copy'}</span>
-                  </button>
+                  <div>{item.original_link}</div>
+                  <div className="short-link">
+                    {item.short_link}
+                    <button onClick={handleClickCopy}
+                      style={{ backgroundColor: isCopied ? "var(--secondary-color)" : "" }}
+                    >
+                      <span>{isCopied ? 'Copied!' : 'Copy'}</span>
+                    </button>
+                  </div>
                 </li>
               ))}
             </ul>
