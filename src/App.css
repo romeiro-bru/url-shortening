@@ -87,7 +87,7 @@ button {
   margin: 0 0.9rem;
 }
 
-.links-list button {
+.shortened-links-list button {
   padding: 0.55rem 1.5rem;
   border-radius: 0.3rem;
   font-size: 0.7rem;
@@ -125,18 +125,18 @@ input::placeholder {
 }
 
 /* /// Results //// */
-.links-list {
+.shortened-links-list {
   position: relative;
   bottom: 4rem;
 }
 
-.links-list li {
+.shortened-links-list li {
   display: flex;
   justify-content: space-between;
   padding: 0.8rem 1.5rem;
   background: white;
   border-radius: 0.3rem;
-  color: var(--text-dark);
+  color: var(--primary-color);
   margin: 0.7rem 0;
   overflow: auto;
   font-size: 0.9rem;
