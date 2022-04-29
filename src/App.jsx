@@ -1,6 +1,6 @@
 import './App.css';
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Footer } from './Components/Footer/Footer';
 import { Header } from './Components/Header/Header';
 import { Card } from './Components/Card/Card';
@@ -30,6 +30,10 @@ const Banner = () => {
 
 function Form({ shortened, setShortened, list, setList, input, setInput }) {
 
+  useEffect(() => {
+    input && setList([...list, shortened].reverse());
+  }, [shortened])
+
   const handleSubmit = (e) => {
     const shortenLink = async () => {
       try {
@@ -41,17 +45,12 @@ function Form({ shortened, setShortened, list, setList, input, setInput }) {
     }
     shortenLink()
     e.preventDefault()
-    list && setList([...list, shortened].reverse());
-    e.target.reset()
-    console.log(1, list)
-    console.log(2, shortened)
-    console.log(3, list)
   }
 
 
   return (
     <form onSubmit={handleSubmit} className="input-box" id="shorten-it">
-      <input onChange={(e) => setInput(e.target.value)} type="text" placeholder="Shorten a link here..." />
+      <input value={input} onChange={(e) => setInput(e.target.value)} type="text" placeholder="Shorten a link here..." />
       <button type="submit">Shorten It!</button>
     </form>
   )
@@ -61,9 +60,10 @@ function App() {
   const [input, setInput] = useState("")
   const [list, setList] = useState([])
   const [shortened, setShortened] = useState("")
+  const [isCopied, setIsCopied] = useState(false);
 
-  const handleClickCopy = (e) => {
-
+  const handleClickCopy = () => {
+    setIsCopied(true)
   }
 
   return (
@@ -75,12 +75,17 @@ function App() {
         <section className="container position-relative ">
           <Form shortened={shortened} setShortened={setShortened} list={list} setList={setList} input={input} setInput={setInput} />
 
-          <section className="links-list">
+          <section className="shortened-links-list">
             <ul>
-              {list.map((item, i) => (
+              {list !== undefined && list.map((item, i) => (
                 <li key={i}>
                   {item}
-                  <button onClick={handleClickCopy}>Copy</button>
+                  <button
+                    onClick={handleClickCopy}
+                    style={{ backgroundColor: isCopied ? "var(--secondary-color)" : "" }}
+                  >
+                    <span>{isCopied ? 'Copied!' : 'Copy'}</span>
+                  </button>
                 </li>
               ))}
             </ul>
