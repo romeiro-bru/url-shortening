@@ -169,23 +169,25 @@ input::placeholder {
   position: relative;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 890px) {
   .banner {
     padding: 4rem 2rem 27rem 2rem;
-    background-size: 50%;
-    background-position-x: 12rem;
+    background-size: 40%;
+    background-position-x: 30rem;
     background-position-y: 3rem;
     h1 {
       width: 60%;
       text-align: center;
-      margin-bottom: 0rem;
       font-size: 3.5rem;
-      line-height: 5rem;
     }
     p {
+      width: 56%;
       text-align: center;
-      margin-top: 0rem;
       font-size: 1rem;
+    }
+    .get-started {
+      position: absolute;
+      left: 11rem;
     }
   }
 
@@ -199,6 +201,15 @@ input::placeholder {
         width: 90%;
         margin: 0.9rem 0.5rem;
     }   
+  }
+
+  .description-title  {
+    h1 {
+      font-size: 1.8rem;
+    }
+    p {
+      width: 90%;
+    }
   }
 
   .shortened-links-list {
@@ -225,7 +236,6 @@ input::placeholder {
     background-position-y: 3rem;
     h1 {
       width: 100%;
-      margin-bottom: 0rem;
       font-size: 2.5rem;
       line-height: 3.5rem;
     }
