@@ -170,6 +170,25 @@ input::placeholder {
 }
 
 @media (max-width: 899px) {
+  .banner {
+    padding: 4rem 2rem 27rem 2rem;
+    background-size: 50%;
+    background-position-x: 12rem;
+    background-position-y: 3rem;
+    h1 {
+      width: 60%;
+      text-align: center;
+      margin-bottom: 0rem;
+      font-size: 3.5rem;
+      line-height: 5rem;
+    }
+    p {
+      text-align: center;
+      margin-top: 0rem;
+      font-size: 1rem;
+    }
+  }
+
   input {
     width: 85%;
   }
@@ -180,5 +199,57 @@ input::placeholder {
         width: 90%;
         margin: 0.9rem 0.5rem;
     }   
+  }
+
+  .shortened-links-list {
+    left: 2rem;
+    ul {
+      padding: 0;
+    }
+    li {
+      width: 76%;
+    }
+  }
+
+  .original-link {
+    overflow: hidden;
+    border-bottom: 1px solid var(--text)
+  }
+}
+
+@media (max-width: 360px) {
+  .banner {
+    padding: 16rem 1rem 10rem 1rem;
+    background-size: 65%;
+    background-position-x: 4rem;
+    background-position-y: 3rem;
+    h1 {
+      width: 100%;
+      margin-bottom: 0rem;
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+    }
+    p {
+      width: 93%;
+    }
+    .get-started {
+      position: absolute;
+      left: 6rem;
+    }
+  }
+  .container {
+    padding: 0 1rem 2rem 1rem;
+  }
+
+  .input-box {
+    width: 100%;
+  }
+  .shortened-links-list {
+    left: 0;
+
+    li {
+      margin: 1rem 0;
+      width: 85%;
+    }
   }
 }
