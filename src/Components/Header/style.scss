@@ -16,7 +16,7 @@ header {
     }
   }
 
-  li:first-of-type {
+  .brand {
     margin: 0 2rem 0 3rem;
     color: var(--text-dark);
     font-weight: 700;
@@ -43,4 +43,26 @@ header {
     padding: 0.7rem 1.5rem;
     font-size: 0.87rem;
   }  
+}
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 890px) {
+  header {
+    margin-top: 3rem;
+  }
+  header ul {
+    display: contents;
+}
+  li:not(.brand), .login {
+    display: none;
+  }
+  .menu {
+    display: initial;
+    margin-right: 2rem;
+    width: 2.2rem;
+    opacity: 0.4;
+  }
 }
