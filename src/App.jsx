@@ -79,11 +79,11 @@ function App() {
             <ul>
               {list !== undefined && list.map((item, i) => (
                 <li key={i}>
-                  <div>{item.original_link}</div>
+                  <div className="original-link">{item.original_link}</div>
                   <div className="short-link">
                     {item.short_link}
                     <button onClick={handleClickCopy}
-                      style={{ backgroundColor: isCopied ? "$secondary-color" : "" }}
+                      style={{ backgroundColor: isCopied ? "var(--secondary-color)" : "" }}
                     >
                       <span>{isCopied ? 'Copied!' : 'Copy'}</span>
                     </button>
