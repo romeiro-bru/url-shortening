@@ -14,7 +14,7 @@ export function Header() {
         <li className="brand">Shortly</li>
         <img className="menu" src={menu} alt="menu btn" />
         {items.map((item, i) => (
-          <li key={i}>
+          <li className="menu-items" key={i}>
             {item.name}
           </li>
         ))}
