@@ -106,7 +106,7 @@ function App() {
             <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
           </div>
 
-          <section className="cards-section">
+          <section className="cards">
             <Card img={chart} title={cardsContent[0].title} text={cardsContent[0].text} />
             <Card img={paper} title={cardsContent[1].title} text={cardsContent[1].text} />
             <Card img={sparkles} title={cardsContent[2].title} text={cardsContent[2].text} />
