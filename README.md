@@ -14,7 +14,7 @@ Your users should be able to:
 * Shorten any valid URL ✔️
 * See a list of their shortened links ✔️
 * Copy the shortened link to their clipboard in a single click
-* Receive an error message when the form is submitted if: the input field is empty
+* Receive an error message when the form is submitted if: the input field is empty :check:
 
 ## Api Reference
 [shrtcode API](https://shrtco.de/docs/)
