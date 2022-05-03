@@ -1,5 +1,5 @@
 import './App.scss';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Header } from './Components/Header/Header';
 import { Form } from './Components/Form/Form';
 import { Card } from './Components/Card/Card';
@@ -31,8 +31,11 @@ function App() {
   const [list, setList] = useState([])
   const [shortened, setShortened] = useState("")
   const [isCopied, setIsCopied] = useState(false);
+  const textAreaRef = useRef(null);
 
-  const handleClickCopy = () => {
+  const CopytoClipboard = () => {
+    textAreaRef.current.select();
+    document.execCommand('copy')
     setIsCopied(true)
   }
 
@@ -50,14 +53,16 @@ function App() {
               {list !== undefined && list.map((item, i) => (
                 <li key={i}>
                   <div className="original-link">{item.original_link}</div>
-                  <div className="short-link">
+
+                  <textarea ref={textAreaRef} className="short-link" spellcheck="false">
                     {item.short_link}
-                    <button onClick={handleClickCopy}
-                      style={{ backgroundColor: isCopied ? "var(--secondary-color)" : "" }}
-                    >
-                      <span>{isCopied ? 'Copied!' : 'Copy'}</span>
-                    </button>
-                  </div>
+                  </textarea>
+
+                  <button onClick={CopytoClipboard}
+                    style={{ backgroundColor: isCopied ? "var(--secondary-color)" : "" }}
+                  >
+                    <span>{isCopied ? 'Copied!' : 'Copy'}</span>
+                  </button>
                 </li>
               ))}
             </ul>

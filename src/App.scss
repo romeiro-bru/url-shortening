@@ -142,12 +142,20 @@ input {
     font-size: 0.9rem;
   }
   .original-link {
+    position: relative;
+    top: 0.4rem;
     width: 50%;
     display: inline-block;
     overflow: hidden;
   }
   .short-link {
+    position: relative;
+    top: 0.4rem;
+    resize: none;
+    border: none;
+    outline: none;
     color: var(--primary-color);
+    font-weight: 700;
   }
 }
 
