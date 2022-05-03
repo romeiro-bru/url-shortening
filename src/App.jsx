@@ -29,6 +29,7 @@ const Banner = () => {
 }
 
 function Form({ shortened, setShortened, list, setList, input, setInput }) {
+  const [hideFormMsg, setHideFormMsg] = useState(true)
 
   useEffect(() => {
     input && setList([...list, shortened].reverse());
@@ -40,18 +41,25 @@ function Form({ shortened, setShortened, list, setList, input, setInput }) {
       try {
         const response = await axios.get(`${endpoint}/shorten?url=${input}`)
         setShortened(response.data.result)
+        setHideFormMsg(response.data.ok)
       } catch (error) {
         console.log(error)
+        setHideFormMsg(false)
       }
     }
     shortenLink()
   }
 
-
   return (
     <form onSubmit={handleSubmit} className="input-box" id="shorten-it">
-      <input value={input} onChange={(e) => setInput(e.target.value)} type="text" placeholder="Shorten a link here..." />
+      <input value={input}
+        onChange={(e) => setInput(e.target.value)} type="text"
+        className={hideFormMsg === false ? "warning" : ""}
+        placeholder="Shorten a link here..." />
       <button type="submit">Shorten It!</button>
+      <p className="form-message"
+        style={{ visibility: hideFormMsg === true ? "hidden" : "visible" }}
+      >Please add a link</p>
     </form>
   )
 }
