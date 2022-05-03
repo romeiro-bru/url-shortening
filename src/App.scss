@@ -95,11 +95,17 @@ input {
   border-radius: 0.4rem;
   height: 2rem;
   width: 68%;
+  font-weight: 700;
 }
 
 input::placeholder {
   color: var(--text);
   font-weight: 700;
+}
+
+.warning {
+  color: var(--warning);
+  border: 0.1rem solid var(--warning);
 }
 
 .input-box {
@@ -108,7 +114,7 @@ input::placeholder {
   background-color: var(--secondary-color);
   background-image: url(assets/images/bg-shorten-desktop.svg);
   background-size: cover;
-  padding: 2rem 0rem;
+  padding: 2rem 0.8rem;
   width: 79%;
   margin-right: auto;
   margin-left: auto;  
@@ -116,10 +122,19 @@ input::placeholder {
   border-radius: 0.4rem;
 
   button {
-    padding: 0.7rem 1rem;
+    padding: 0.8rem 1rem;
     border-radius: 0.3rem;
     margin: 0 0.9rem;
   }
+}
+
+.form-message {
+  position: absolute;
+  bottom: 0rem;
+  left: 7%;
+  font-style: italic;
+  color: var(--warning);
+  font-size: 0.8rem;
 }
 
 .container {
@@ -228,7 +243,7 @@ input::placeholder {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 460px) {
   .banner {
     padding: 16rem 1rem 10rem 1rem;
     background-size: 65%;
