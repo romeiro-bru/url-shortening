@@ -1,4 +1,5 @@
-import './style.css';
+import './style.scss';
+import menu from '../../assets/images/menu.png';
 
 const items = [
   { name: "Features" },
@@ -10,9 +11,10 @@ export function Header() {
   return (
     <header>
       <ul>
-        <li>Shortly</li>
+        <li className="brand">Shortly</li>
+        <img className="menu" src={menu} alt="menu btn" />
         {items.map((item, i) => (
-          <li key={i}>
+          <li className="menu-items" key={i}>
             {item.name}
           </li>
         ))}

@@ -2,7 +2,6 @@
   background-color: var(--secondary-color);
   background-image: url(../../assets/images/bg-boost-desktop.svg);
   background-size: cover;
-
   color: white;
   padding: 2rem 0rem;
 }
@@ -11,22 +10,20 @@ footer {
   text-align: left;
   padding: 3rem 0rem;
   background-color: var(--text-dark);
-}
 
-footer h2 {
-  position: absolute;
-  left: 6rem;
-}
-
-footer ul {
-  display: block;
-  line-height: 2rem;
-  margin-right: 1rem;
-}
-
-/* apply hover effect to li except for first li */
-footer li:hover:not(:first-of-type) {
-  color: var(--primary-color);
+  h2 {
+    position: absolute;
+    left: 6rem;
+  }
+  ul {
+    display: block;
+    line-height: 2rem;
+    margin-right: 1rem;
+  }
+  /* apply hover effect to li except for first li */
+  li:hover:not(:first-of-type) {
+    color: var(--primary-color);
+  }
 }
 
 .about {
@@ -40,15 +37,15 @@ footer li:hover:not(:first-of-type) {
   flex-wrap: wrap;
   position: absolute;
   right: 8rem;
-}
 
-.icons img {
-  width: 1.4rem;
-  margin-right: 1.2rem;
-}
-/* adds a filter to change png color */
-.icons img:hover {
-  filter: grayscale(100%) brightness(30%) sepia(70%) hue-rotate(-150deg) saturate(900%) contrast(1);
+  img {
+    width: 1.4rem;
+    margin-right: 1.2rem;    
+    /* adds a filter to change png color */
+    &:hover {
+      filter: grayscale(100%) brightness(30%) sepia(70%) hue-rotate(-150deg) saturate(900%) contrast(1);
+    }
+  }
 }
 
 .bold {

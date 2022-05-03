@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Footer } from './Components/Footer/Footer';
@@ -29,29 +29,37 @@ const Banner = () => {
 }
 
 function Form({ shortened, setShortened, list, setList, input, setInput }) {
+  const [warningMessage, setWarningMessage] = useState(true)
 
   useEffect(() => {
     input && setList([...list, shortened].reverse());
   }, [shortened])
 
   const handleSubmit = (e) => {
+    e.preventDefault()
     const shortenLink = async () => {
       try {
         const response = await axios.get(`${endpoint}/shorten?url=${input}`)
-        setShortened(response.data.result.short_link)
+        setShortened(response.data.result)
+        setWarningMessage(response.data.ok)
       } catch (error) {
         console.log(error)
+        setWarningMessage(false)
       }
     }
     shortenLink()
-    e.preventDefault()
   }
-
 
   return (
     <form onSubmit={handleSubmit} className="input-box" id="shorten-it">
-      <input value={input} onChange={(e) => setInput(e.target.value)} type="text" placeholder="Shorten a link here..." />
+      <input value={input}
+        onChange={(e) => setInput(e.target.value)} type="text"
+        className={warningMessage === false ? "warning" : ""}
+        placeholder="Shorten a link here..." />
       <button type="submit">Shorten It!</button>
+      <p className="form-message"
+        style={{ visibility: warningMessage === true ? "hidden" : "visible" }}
+      >Please add a link</p>
     </form>
   )
 }
@@ -79,13 +87,15 @@ function App() {
             <ul>
               {list !== undefined && list.map((item, i) => (
                 <li key={i}>
-                  {item}
-                  <button
-                    onClick={handleClickCopy}
-                    style={{ backgroundColor: isCopied ? "var(--secondary-color)" : "" }}
-                  >
-                    <span>{isCopied ? 'Copied!' : 'Copy'}</span>
-                  </button>
+                  <div className="original-link">{item.original_link}</div>
+                  <div className="short-link">
+                    {item.short_link}
+                    <button onClick={handleClickCopy}
+                      style={{ backgroundColor: isCopied ? "var(--secondary-color)" : "" }}
+                    >
+                      <span>{isCopied ? 'Copied!' : 'Copy'}</span>
+                    </button>
+                  </div>
                 </li>
               ))}
             </ul>

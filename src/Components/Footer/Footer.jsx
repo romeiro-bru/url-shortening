@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 import facebook from "../../assets/images/facebook.svg";
 import twitter from "../../assets/images/twitter.png";
 import pinterest from "../../assets/images/pinterest.png";
