@@ -3,7 +3,7 @@
 > Challenge project given by [Frontend Mentor](https://www.frontendmentor.io/).
 
 ## The challenge 🕵️
-Your [challenge](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) is to build out this landing page, integrate with the [shrtcode API](https://shrtco.de/docs/) and get it looking as close to the design as possible.
+The [challenge](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G) is to build out this landing page, integrate with the [shrtcode API](https://shrtco.de/docs/) and get it looking as close to the design as possible.
 
 <img width="600" src="https://user-images.githubusercontent.com/56081906/166335005-d73e9a0f-7e4f-4147-8d8a-f128c0aa72c2.gif" alt="gif" />
 <img width="600" src="https://user-images.githubusercontent.com/56081906/165976319-974c5d2d-6d84-430b-b4df-35e1a6ae8c36.png" alt="lading page" />
