@@ -1,0 +1,15 @@
+.warning {
+  color: var(--warning);
+  border: 0.1rem solid var(--warning);
+}
+.warning::placeholder {
+  color: var(--warning);
+}
+.form-message {
+  position: absolute;
+  bottom: 0rem;
+  left: 7%;
+  font-style: italic;
+  color: var(--warning);
+  font-size: 0.8rem;
+}
