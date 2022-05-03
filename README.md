@@ -7,7 +7,7 @@ This is my solution to the [URL Shortening API Challenge](https://shrtco.de/QA6b
 <br>
 The challenge is to build out this [landing page](https://shrtco.de/JwmR16), integrate with the [shrtcode API](https://shrtco.de/docs/) and get it looking as close to the design as possible.
 
-<img width="600" src="https://shrtco.de/SMphsf" alt="gif" />
+<img width="600" src="https://shrtco.de/UEdRfy" alt="gif" />
 <img width="600" src="https://shrtco.de/nMXzmW" alt="lading page" />
 
 Your users should be able to:
@@ -18,7 +18,7 @@ Your users should be able to:
 * Copy the shortened link to their clipboard in a single click
 * Receive an error message when the form is submitted if: the input field is empty ✔️
 
-## Api Reference
+## API Documentation
 [shrtcode API](https://shrtco.de/docs/)
 
 
