@@ -9,8 +9,9 @@ This is my solution to the [URL Shortening API Challenge](https://shrtco.de/QA6b
 <br>
 The challenge is to build out this [landing page](https://shrtco.de/JwmR16), integrate with the [shrtcode API](https://shrtco.de/docs/) and get it looking as close to the design as possible.
 
-<img width="600" src="https://shrtco.de/UEdRfy" alt="gif" />
 <img width="600" src="https://shrtco.de/nMXzmW" alt="lading page" />
+<img width="600" src="https://shrtco.de/UEdRfy" alt="gif" />
+<img  src="https://shrtco.de/G6Rmv2" alt="gif mobile"
 
 Your users should be able to:
 
