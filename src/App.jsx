@@ -4,6 +4,7 @@ import { Header } from './Components/Header/Header';
 import { Form } from './Components/Form/Form';
 import { Card } from './Components/Card/Card';
 import { Footer } from './Components/Footer/Footer';
+import { LinksList } from './Components/LinksList/LinksList';
 import chart from './assets/images/chart.png';
 import sparkles from './assets/images/sparkles.png';
 import paper from './assets/images/paper.png';
@@ -30,42 +31,15 @@ function App() {
   const [input, setInput] = useState("")
   const [list, setList] = useState([])
   const [shortened, setShortened] = useState("")
-  const [isCopied, setIsCopied] = useState(false);
-
-  const CopyLink = (item) => {
-    navigator.clipboard.writeText(item.short_link)
-    setIsCopied(true)
-  }
 
   return (
     <div className="App">
       <main>
         <Header />
         <Banner />
-
         <section className="container position-relative ">
           <Form shortened={shortened} setShortened={setShortened} list={list} setList={setList} input={input} setInput={setInput} />
-
-          <section className="shortened-links-list">
-            <ul>
-              {list !== undefined && list.map((item, i) => (
-                <li key={i}>
-                  <div className="original-link">{item.original_link}</div>
-
-                  <div className="short-link" >
-                    {item.short_link}
-                  </div>
-
-                  <button onClick={() => CopyLink(item)}
-                    style={{ backgroundColor: isCopied ? "var(--secondary-color)" : "" }}
-                  >
-                    <span>{isCopied ? 'Copied!' : 'Copy'}</span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </section>
-
+          <LinksList list={list} />
           <div className="description-title">
             <h1>Advanced Statistics</h1>
             <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
