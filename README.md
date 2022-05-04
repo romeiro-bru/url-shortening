@@ -1,6 +1,8 @@
-# Shortly / URL Shortening API Challenge
+<h1 align="center"> Shortly / URL Shortening API Challenge </h1>
 
 > Challenge project given by [Frontend Mentor](https://www.frontendmentor.io/).
+
+>[Project Deploy](https://shortly-romeiro-urlshortening.netlify.app/)
 
 ## The challenge 🕵️
 This is my solution to the [URL Shortening API Challenge](https://shrtco.de/QA6b9W).
