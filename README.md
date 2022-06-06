@@ -6,8 +6,6 @@
   <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" height="25" alt="tailwind" />
 </div>
 
-⚠️ Work in Progress! ⚠️
-
 > Challenge project given by [Frontend Mentor](https://www.frontendmentor.io/).
 
 >[Project Deploy](https://shortly-romeiro-urlshortening.netlify.app/)
@@ -15,7 +13,7 @@
 ## The challenge 🕵️
 This is my solution to the [URL Shortening API Challenge](https://shrtco.de/QA6b9W).
 <br>
-The challenge is to build out this [landing page](https://shrtco.de/JwmR16), integrate with the [shrtcode API](https://shrtco.de/docs/) and get it looking as close to the design as possible.
+The challenge is to build out this [landing page](https://shrtco.de/JwmR16), integrate with the [shrtcode API](https://shrtco.de/docs/).
 
 <img width="600" src="https://shrtco.de/nMXzmW" alt="lading page" />
 <img width="600" src="https://shrtco.de/UEdRfy" alt="gif" />
